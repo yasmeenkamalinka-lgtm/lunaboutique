@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luna Boutique</title>
+<style>
+body{font-family:Arial, sans-serif;margin:0;background:#fafafa;color:#333}
+header{background:linear-gradient(90deg,#f5e6e8,#ffffff);padding:20px;text-align:center}
+header h1{margin:0}
+nav{display:flex;justify-content:center;gap:20px;background:#fff;border-bottom:1px solid #ddd;padding:10px;flex-wrap:wrap}
+nav a{text-decoration:none;color:#333;font-weight:bold}
+section{padding:40px 20px;max-width:1100px;margin:auto}
+.hero{background:#f5e6e8;text-align:center;padding:60px 20px;border-radius:10px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1);text-align:center}
+.card img{max-width:100%;border-radius:8px}
+.btn{display:inline-block;margin-top:10px;padding:10px 16px;background:#333;color:#fff;border-radius:6px;text-decoration:none}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.review{background:white;padding:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.instagram{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.instagram img{width:100%;border-radius:8px}
+footer{background:#333;color:white;text-align:center;padding:20px;margin-top:40px}
+.cart{position:fixed;right:20px;bottom:20px;background:#333;color:#fff;padding:12px 16px;border-radius:30px;font-size:14px}
+</style>
+<script>
+let cartCount = 0;
+function addToCart(){
+ cartCount++;
+ document.getElementById('cartCount').innerText = cartCount;
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1>Luna Boutique</h1>
+<p>Style That Speaks Confidence</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#reviews">Reviews</a>
+<a href="#instagram">Social</a>
+<a href="#sustainability">Sustainability</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+<h2>Welcome to Luna Boutique</h2>
+<p>Discover stylish and affordable fashion designed for modern customers. Shop the latest trends and elevate your wardrobe.</p>
+<a class="btn" href="#products">Shop Now</a>
+</section>
+
+<section id="about">
+<h2>About Our Shop</h2>
+<p>Luna Boutique was founded to provide fashionable clothing that combines quality, affordability, and elegance. Our goal is to help customers feel confident and stylish every day.</p>
+</section>
+
+<section id="products">
+<h2>Popular Products</h2>
+<div class="products">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520975922284-9c3b7f5c0d3d" alt="Dress">
+<h3>Casual Dress</h3>
+<p>$30</p>
+<button class="btn" onclick="addToCart()">Add to Cart</button>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3" alt="Handbag">
+<h3>Handbag</h3>
+<p>$25</p>
+<button class="btn" onclick="addToCart()">Add to Cart</button>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1528701800489-20be3c2ea5c9" alt="Shoes">
+<h3>Shoes</h3>
+<p>$35</p>
+<button class="btn" onclick="addToCart()">Add to Cart</button>
+</div>
+</div>
+</section>
+
+<section id="reviews">
+<h2>Customer Reviews</h2>
+<div class="reviews">
+<div class="review">
+<h4>⭐⭐⭐⭐⭐</h4>
+<p>"Amazing quality and great prices. My favorite boutique!"</p>
+</div>
+<div class="review">
+<h4>⭐⭐⭐⭐⭐</h4>
+<p>"Beautiful styles and very friendly service."</p>
+</div>
+<div class="review">
+<h4>⭐⭐⭐⭐⭐</h4>
+<p>"Affordable fashion and fast delivery!"</p>
+</div>
+</div>
+</section>
+
+<section id="instagram">
+<h2>Latest From Our Social Media</h2>
+<div class="instagram">
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+<img src="https://images.unsplash.com/photo-1521334884684-d80222895322">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+</div>
+<p>Follow us on Instagram @lunaboutique</p>
+</section>
+
+<section id="sustainability">
+<h2>Sustainability</h2>
+<p>We use eco-friendly packaging, reduce plastic use, support local suppliers, and offer digital receipts to reduce paper waste. Our shop is committed to protecting the environment while providing high-quality products.</p>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p>Location: Manama, Bahrain</p>
+<p>Instagram: @lunaboutique</p>
+<p>Email: contact@lunaboutique.com</p>
+
+<h3>Our Location</h3>
+<iframe src="https://maps.google.com/maps?q=manama%20bahrain&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0"></iframe>
+</section>
+
+<div class="cart">🛒 Cart: <span id="cartCount">0</span></div>
+
+<footer>
+<p>© 2026 Luna Boutique | Fashion for Everyone</p>
+</footer>
+
+</body>
+</html>
